@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Entregas</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>Cliente</td>
+                <td>Rua </td>
+                <td>Bairro</td>
+                <td>Número</td>
+                <td>Complemento</td>
+                <td>Quantidade</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entrega in entregas %}
+                <tr>
+                    <td>{{ entrega.nome }}</td>
+                    <td>{{ entrega.rua }}</td>
+                    <td>{{ entrega.bairro }}</td>
+                    <td>{{ entrega.numero }}</td>
+                    <td>{{ entrega.complemento }}</td>
+                    <td>{{ entrega.qtd }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'salvar' %}">Novo pedido</a>
+</body>
+</html>
